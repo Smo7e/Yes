@@ -1,0 +1,119 @@
+
+body{
+    background-image: url(image/fon.jpg);
+    background-size:cover;
+    margin: 0px;
+    font-family: 'Bad';
+}
+.mainContainer{
+    margin-top: 20px;
+}
+.hide{
+    display: none;
+}
+.menu{
+    
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.menu-item{
+
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    line-height: 60px;
+    color: rgb(35, 28, 28);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgb(216, 216, 96), orange, violet, purple, blue, yellow);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+.menu-item:hover {
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+}
+.menu-item:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(45deg, #f15523, #ef3224, #7c3697);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5%;
+  }
+  .menu-item:hover:before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+  }
+    
+
+
+
+.shootStyle{
+    font-size: 2em;
+    color: rgb(23, 16, 29);
+    text-align: center;
+    
+
+}
+#roots{
+    border-radius: 5px;
+    background-color: #ccc;
+    padding: 10px 30px;
+    border: 0 none;
+}
+
+input[type=submit] {
+    padding:10px 30px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg,rgb(171, 223, 171),white,rgb(171, 223, 171))
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+input[type=radio] {
+    border: 0px;
+    width: 2em;
+    height: 2em;
+    
+}
+@font-face {
+    font-family: "Bad"; 
+    src: url("fonts/BadScript-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 

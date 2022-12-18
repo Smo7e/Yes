@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="esse/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="RPG/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="graph/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="calculator/style.css" media="screen">
+    <link rel="icon" href="image/butterfly.png">
+</head>
+
+<body>
+    
+        <div id='main' class="menu">
+            <div id='esseid' class="menu-item esse knopki" data-content ='esse'>Эccе</div>
+            <div id='shootid' class="menu-item misen knopki " data-content="main-form">Выстрел</div>
+            <div id='shooterid' class="menu-item pule knopki"data-content="main-formShooter">Пулемет</div>
+            <div id='rootid' class="menu-item corni knopki"data-content="rootsContent">Корни</div>
+            <div id="rpgid" class="menu-item rpg knopki"data-content="rpg">Рпг</div>
+            <div id="graphid" class="menu-item graph knopki"data-content="graphikid">График</div>
+            <div id="calculatorid" class="menu-item calculator knopki"data-content="calcid">Калькулятор</div>
+        </div>
+        <div class="mainContainer">
+        <div id="esse" class="hide contentEvent">
+            <h1>Как я сюда попала?</h1>
+            <p>Попала сюда я так: <br>
+                Усердно готовилась к экзаменам. <br>
+                Переживала перед сдачей. <br>
+                Сдала :) <br>
+                Поступила. <br>
+                Увидев в расписании программирование, обрадовалась и пришла.
+            </p>
+            <h1>Что я здесь делаю?</h1>
+            <p>Здесь я обучаюсь навыкам программирования, открываю для себя что-то новое.</p>
+            <h1>Что я хочу от этого получить?</h1>
+            <p>От этого в будущем хочу получить хороший заработок, самозанятость, новые знания и окружение.</p>
+        </div>
+
+        <form class="hide shootStyle contentEvent" id="main-form" method="post">
+            <label for="X">Координата X:</label>
+            <input type="text" name="x" id='x'> <br><br>
+            <label for="Y">Координата Y:</label>
+            <input type="text" name="y" id='y'> <br><br>
+            <input type="submit" name="submit" value="Выстрел">
+            <div id="resultShoot"></div>
+        </form>
+
+        <form class="hide shootStyle contentEvent" id="main-formShooter" method="post">
+            <label for="count">Количество выстрелов:</label>
+            <input type="text" name="count" placeholder="" id='countid'> <br><br>
+            <label for="min">Минимальное значние:</label>
+            <input type="text" name="min" placeholder="" id='minid'> <br><br>
+            <label for="max">Максимальное значение:</label>
+            <input type="text" name="max" placeholder="" id='maxid'> <br><br>
+            <input type="submit" name="submit" value="Много выстрелов">
+            <div id="resultShooter"></div>
+        </form>
+
+        <div class="contentEvent shootStyle hide" id="rootsContent">
+            <div>
+                <input type="text" id="aR" placeholder="a">
+                <input type="text" id="bR" placeholder="b">
+                <input type="text" id="cR" placeholder="c">
+                <input type="text" id="dR" placeholder="d">
+                <input type="text" id="eR" placeholder="e"> 
+            </div>
+            <p><button id = 'roots'>Вычислить корни</button></p>
+            <div id = 'root-otvet'>
+                <div id="rootsResult"></div>
+            </div>
+        </div>
+
+        <div class="hide contentEvent" id="que"></div>
+
+        <div id="rpg" class="hide contentEvent">
+            <div id="rpgQuestions"></div>
+            <div id="rpgAnswer"></div>
+        </div>
+
+        <div id='graphikid' class="contentEvent hide">
+            <div class=" container graphMain ">
+                <div class="graphMain">
+                    <canvas id="graph" width="500" height="500"></canvas>
+                </div>
+                <div id="grap">
+                    <button class="addFunction">Добавить</button>
+                    <div class="funcInputs"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="calcid" class="Calculator contentEvent hide">
+            <div id="Inputs">
+                <textarea id="a" type="text"></textarea>
+                <textarea id="b" type="text"></textarea>
+            </div>
+            <div id="container">
+                <button class="operand-calc" data-operand="add">+</button>
+                <button class="operand-calc" data-operand="sub">-</button>
+                <button class="operand-calc" data-operand="mult">*</button>
+                <button class="operand-calc" data-operand="div">/</button>
+                <button class="operand-calc" data-operand="prod">*p</button>
+                <button class="operand-calc" data-operand="pow">^</button>
+                <button class="operand-calc" data-operand="one">1</button>
+                <button class="operand-calc" data-operand="zero">0</button>
+            </div>
+        
+            <div class="Polynomial">
+                <h1>Полиномы</h1>
+                <div id="Inputs">
+                    <textarea id="p1" placeholder="Первый полином"></textarea>
+                    <textarea id="p2" placeholder="Второй полином"></textarea>
+                    <textarea type="number" id="xCalc" placeholder="Ответ"></textarea>
+                </div>
+            <div>
+                <button class="operand-poly" data-operand="add">+</button>
+                <button class="operand-poly" data-operand="sub">-</button>
+                <button class="operand-poly" data-operand="mult">*</button>
+                <div id="res" placeholder="Ответ"></div>
+            </div>
+            
+            <div>
+                <button class="operand-result" data-operand="point">Ответ</button>
+            </div>
+        </div>
+        </div>
+        
+
+    </div>
+</div>
+    <script src="main.js"></script>
+
+    <script src="shoot/shoot.js"></script>
+
+    <script src="roots/roots.js"></script>
+    
+    <script src="RPG/Base.js"></script>
+    <script src="RPG/rpg.js"></script>
+ 
+
+    <script src='graph/Canvas.js'></script>
+    <script src="graph/Graph2d.js"></script>
+    <script src="graph/ui.js"></script>
+    <script src='graph/MainCanvas.js'></script>
+
+
+    <script src="calculator/Complex.js"></script>
+    <script src="calculator/Matrix.js"></script>
+    <script src="calculator/Vector.js"></script>
+    <script src="calculator/Polynom/Polynomial.js"></script>
+    <script src="calculator/ComplexCalculator.js"></script>
+    <script src="calculator/MatrixCalculator.js"></script>
+    <script src="calculator/VectorCalculator.js"></script>
+    <script src="calculator//Polynom/PolynomailCalculator.js"></script>
+    <script src="calculator//Polynom/Member.js"></script>
+    <script src="calculator/Calculator.js"></script>
+    <script src="calculator/main.js"></script>
+</body>
+
+</html>

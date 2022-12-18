@@ -1,0 +1,42 @@
+.graphButton{
+    border: solid 2px red;
+    border-radius: 50px;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    font: 1.5em sans-serif;
+    color: red;
+}
+
+.addFunction{
+    padding: 0px;
+    width: 400px;
+    height: 70px;
+    margin-top: 0;
+}
+
+#grap{
+    background: linear-gradient(180deg, rgb(216, 216, 96), orange,rgb(204, 121, 183), violet, purple, rgb(246, 98, 112));
+    height: 700px;
+    width: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+.graphMain{
+    margin-left: 7%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+.showComponent{
+    height: 300px;
+    width: 200px;
+}
